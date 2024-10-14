@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio - Andi Muhammad Alif</title>
+<style>
+ body {
+    background: linear-gradient(45deg, #003ef8f7, #000000, #00039a, #000000, #7d0000, #9900cc);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite;
+}
+
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+ 
+ 
+ 
+ * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    padding: 10px 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    animation: slideDown 1s ease-out;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+}
+
+.navbar ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: #00aaff;
+    transform: scale(1.1);
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    background: url('your-hero-image.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-content h1 {
+    font-size: 4rem;
+    color: #fff;
+    opacity: 0;
+    animation: fadeIn 1.5s ease-out forwards;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    color: #ddd;
+    margin: 10px 0;
+    opacity: 0;
+    animation: fadeIn 2s ease-out forwards;
+}
+
+.cta-button {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    animation: bounce 2s infinite;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+/* About Section */
+.about-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    opacity: 0;
+    animation: fadeInLeft 1.5s ease-out forwards;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    max-width: 600px;
+    margin: 0 auto;
+    opacity: 0;
+    animation: fadeInRight 1.5s ease-out forwards;
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Projects Section */
+.projects-section {
+    background-color: #f0f0f0;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.projects-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.project-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: float 4s infinite ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Contact Section */
+.contact-section {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-section h2 {
+    margin-bottom: 30px;
+    opacity: 0;
+    animation: fadeInUp 1.5s ease-out forwards;
+}
+
+.contact-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contact-section form input,
+.contact-section form textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: box-shadow 0.3s ease;
+}
+
+.contact-section form input:focus,
+.contact-section form textarea:focus {
+    box-shadow: 0 0 10px rgba(0, 170, 255, 0.5);
+}
+
+.contact-section form button {
+    background-color: #00aaff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition
+
+</style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <h1 class="fade-in">Andi Muhammad Alif</h1>
+            <p class="fade-in">Mahasiswa & Web Developer</p>
+            <a href="#projects" class="cta-button bounce">Lihat Proyek Saya</a>
+            <div class="container">
+        <h1>Kontak Saya</h1>
+        <p>Anda dapat menghubungi saya melalui media sosial berikut:</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/andimuhammadalipp" target="_blank" class="instagram">Instagram</a>
+            <a href="https://www.telegram.com/andimuhammadalip" target="_blank" class="telegram">Telegram</a>
+                <a href="https://www.twitter.com/andimuhalif425" target="_blank" class="twitter">twitter</a> 
+            </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="fade-in-left">About Me</h2>
+            <p class="fade-in-right">Saya adalah seorang mahasiswa dan pengembang web yang bersemangat menciptakan website interaktif dan dinamis. Saya selalu tertarik untuk belajar teknologi terbaru dan menyelesaikan masalah yang kompleks.</p>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="fade-in-up">My Projects</h2>
+            <div class="project-grid">
+                <div class="project-card float">
+                    <h3>Project 1</h3>
+                    <p>adding features or menus to the website</p>
+                </div>
+                <div class="project-card float">
+                    <h3>Project 2</h3>
+                    <P>designing the appearance of a website</p>
+                </div>
+                <div class="project-card float">
+                    <h3>Project 3</h3>
+                    <p>develop the website to make it look more attractive and informative</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Andi Muhammad Alif. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
